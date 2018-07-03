@@ -27,6 +27,7 @@ Route::middleware('jwt.auth')->get('/users', function (Request $request) {
     return Auth()->user();
 });
 
+
 Route::middleware('jwt.auth')->group(function(){
   Route::resource('books','API\BookController');
 });
